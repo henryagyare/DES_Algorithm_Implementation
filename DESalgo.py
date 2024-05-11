@@ -1,6 +1,8 @@
 from desFunctions.DESOperations import DESOperations, Conversions
 from keyGeneration import keyGeneration
+import time
 
+start_time = time.time()
 desOperations = DESOperations()
 conversion = Conversions()
 
@@ -55,9 +57,14 @@ PT = conversion.binary_to_text(plainText)
 CT = conversion.binary_to_text(cipherText)
 
 print(f"plaintext = {PT}")
-# print(f"ciphertext = {CT}")
-print(cipherText)
+print(f"ciphertext = {CT}")
+# print(cipherText)
 
+end_time = time.time()
 
+execution_time = end_time - start_time
+print("Execution time = end_time - start_time")
+print(f"Execution time = {end_time} - {start_time}")
+print("Execution time:", execution_time, "seconds")
 
 
